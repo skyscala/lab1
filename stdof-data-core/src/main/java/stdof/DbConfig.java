@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.mongodb.MongoDbFactory;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
-import stdof.lang.util.ExternalPropUtil;
+import stdof.lang.ExternalPropUtil;
 
 /**
  * Application Configuration class

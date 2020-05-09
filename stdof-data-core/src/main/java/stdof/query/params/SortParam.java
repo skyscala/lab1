@@ -5,10 +5,16 @@
  */
 package stdof.query.params;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  *
  * @author zeyarh
  */
+
+@Getter
+@Setter
 public class SortParam {
  
     public static final String DESC="DESC";
@@ -18,45 +24,5 @@ public class SortParam {
     private String key;
     private String sortType;
 
-    /**
-     * @return the order
-     */
-    public int getOrder() {
-        return order;
-    }
-
-    /**
-     * @param order the order to set
-     */
-    public void setOrder(int order) {
-        this.order = order;
-    }
-
-    /**
-     * @return the key
-     */
-    public String getKey() {
-        return key;
-    }
-
-    /**
-     * @param key the key to set
-     */
-    public void setKey(String key) {
-        this.key = key;
-    }
-
-    /**
-     * @return the sortType
-     */
-    public String getSortType() {
-        return sortType;
-    }
-
-    /**
-     * @param sortType the sortType to set
-     */
-    public void setSortType(String sortType) {
-        this.sortType = sortType;
-    }
+    
 }

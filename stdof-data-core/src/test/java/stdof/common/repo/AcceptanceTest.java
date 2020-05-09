@@ -32,9 +32,9 @@ import stdof.DbConfig;
 import stdof.common.docs.entity.StdofEntity;
 import stdof.common.opr.StdofManageOpr;
 import stdof.common.opr.StdofQueryOpr;
-import stdof.lang.util.CommonLogger;
-import stdof.lang.util.ExternalPropUtil;
-import stdof.lang.util.JsonUtil;
+import stdof.lang.CommonLogger;
+import stdof.lang.ExternalPropUtil;
+import stdof.lang.JsonUtil;
 import stdof.query.FilterCriteria;
 import stdof.query.SortCriteria;
 import stdof.query.StringFilterCriteria;
@@ -129,7 +129,7 @@ public class AcceptanceTest {
         try (AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(DbConfig.class)) {
 
             StdofEntity entity = new StdofEntity();
-            StdofManageOpr saveOpr = context.getAutowireCapableBeanFactory().createBean(StdofPersistenceAdapter.class);
+            StdofManageOpr saveOpr = StdofManageOprBeanFactory.create(context);
             StdofQueryOpr queryOpr = context.getAutowireCapableBeanFactory().createBean(StdofPersistenceAdapter.class);
 
             saveOpr.save(entity);

@@ -1,4 +1,4 @@
-package stdof.lang.util;
+package stdof.lang;
 
 import com.google.gson.Gson;
 

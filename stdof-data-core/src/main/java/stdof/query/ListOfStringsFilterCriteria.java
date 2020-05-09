@@ -6,26 +6,19 @@
 package stdof.query;
 
 import java.util.List;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  *
  * @author zeyarh
  */
+
+@Getter
+@Setter
 public class ListOfStringsFilterCriteria extends FilterCriteria{
     
     private List<String> values;
 
-    /**
-     * @return the values
-     */
-    public List<String> getValues() {
-        return values;
-    }
-
-    /**
-     * @param values the values to set
-     */
-    public void setValues(List<String> values) {
-        this.values = values;
-    }
+    
 }

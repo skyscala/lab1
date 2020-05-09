@@ -12,7 +12,7 @@ import com.querydsl.core.types.dsl.NumberPath;
 import com.querydsl.core.types.dsl.PathBuilder;
 import com.querydsl.core.types.dsl.SimplePath;
 import com.querydsl.core.types.dsl.StringPath;
-import stdof.lang.util.CommonLogger;
+import stdof.lang.CommonLogger;
 
 
 import java.math.BigDecimal;

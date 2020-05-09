@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package stdof.lang.util;
+package stdof.query;
 
 import stdof.query.params.QueryResultPage;
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ import org.springframework.data.domain.Page;
  *
  * @author zeyarh
  */
-public abstract class AbstractWebQueryResultFactory<A,B> {
+public abstract class AbstractQueryResultFactory<A,B> {
     
     protected abstract B convert(A a);
     

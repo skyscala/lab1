@@ -6,40 +6,19 @@
 package stdof.query.params;
 
 import java.util.List;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  *
  * @author zeyarh
  */
+
+@Getter
+@Setter
 public class Filter {
     private String logic;
     private List<FilterParam> filterParams;
 
-    /**
-     * @return the logic
-     */
-    public String getLogic() {
-        return logic;
-    }
-
-    /**
-     * @param logic the logic to set
-     */
-    public void setLogic(String logic) {
-        this.logic = logic;
-    }
-
-    /**
-     * @return the filterParams
-     */
-    public List<FilterParam> getFilterParams() {
-        return filterParams;
-    }
-
-    /**
-     * @param filterParams the filterParams to set
-     */
-    public void setFilterParams(List<FilterParam> filterParams) {
-        this.filterParams = filterParams;
-    }
+    
 }

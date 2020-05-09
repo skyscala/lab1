@@ -1,4 +1,4 @@
-package stdof.lang.util;
+package stdof.lang;
 
 
 
@@ -12,12 +12,10 @@ public abstract class SelfValidating<T> {
     public SelfValidating(){
         ValidatorFactory factory= Validation.buildDefaultValidatorFactory();
         validator = factory.getValidator();
-        
     }
         
 
-    protected void validateSelf(){
-        
+    protected void validateSelf(){        
         Set<ConstraintViolation<T>> violations = validator.validate((T)this);
         if(!violations.isEmpty()){
             CommonLogger.log(SelfValidating.class, "violations:"+violations);

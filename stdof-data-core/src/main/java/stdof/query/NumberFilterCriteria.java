@@ -5,25 +5,19 @@
  */
 package stdof.query;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  *
  * @author zeyarh
  */
+
+@Getter
+@Setter
 public class NumberFilterCriteria extends FilterCriteria{
     
     private Long value;
 
-    /**
-     * @return the value
-     */
-    public Long getValue() {
-        return value;
-    }
-
-    /**
-     * @param value the value to set
-     */
-    public void setValue(Long value) {
-        this.value = value;
-    }
+    
 }

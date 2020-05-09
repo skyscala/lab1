@@ -6,28 +6,21 @@
 package stdof.query;
 
 import java.util.Date;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  *
  * @author zeyarh
  */
+
+@Getter
+@Setter
 public class DateFilterCriteria extends FilterCriteria{
     
     private Date date;
 
-    /**
-     * @return the date
-     */
-    public Date getDate() {
-        return date;
-    }
-
-    /**
-     * @param date the date to set
-     */
-    public void setDate(Date date) {
-        this.date = date;
-    }
+    
     
     
 }

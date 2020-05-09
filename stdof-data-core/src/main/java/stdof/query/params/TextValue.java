@@ -5,27 +5,21 @@
  */
 package stdof.query.params;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  *
  * @author zeyarh
  */
+
+@Getter
+@Setter
 public class TextValue {
 
     private String value;
 
-    /**
-     * @return the value
-     */
-    public String getValue() {
-        return value;
-    }
-
-    /**
-     * @param value the value to set
-     */
-    public void setValue(String value) {
-        this.value = value;
-    }
+    
     
     
 }

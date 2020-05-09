@@ -5,40 +5,20 @@
  */
 package stdof.query.params;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  *
  * @author zeyarh
  */
+
+@Getter
+@Setter
 public class DateValue {
 
     private String datePattern;
     private String date;
 
-    /**
-     * @return the datePattern
-     */
-    public String getDatePattern() {
-        return datePattern;
-    }
-
-    /**
-     * @param datePattern the datePattern to set
-     */
-    public void setDatePattern(String datePattern) {
-        this.datePattern = datePattern;
-    }
-
-    /**
-     * @return the date
-     */
-    public String getDate() {
-        return date;
-    }
-
-    /**
-     * @param date the date to set
-     */
-    public void setDate(String date) {
-        this.date = date;
-    }
+   
 }

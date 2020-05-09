@@ -15,8 +15,8 @@ import org.springframework.data.mongodb.core.convert.MappingMongoConverter;
 import org.springframework.data.mongodb.core.convert.MongoCustomConversions;
 import stdof.common.docs.converter.StdofEntityReadConverter;
 import stdof.common.docs.converter.StdofEntityWriteConverter;
-import stdof.lang.util.CommonLogger;
-import stdof.lang.util.ConverterStore;
+import stdof.lang.CommonLogger;
+import stdof.lang.ConverterStore;
 
 /**
  *

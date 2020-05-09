@@ -5,42 +5,23 @@
  */
 package stdof.query.params;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  *
  * @author zeyarh
  */
+
+
+@Getter
+@Setter
 public class PaginationParam {
 
     private int pageNumber;
     private int pageSize;
 
-    /**
-     * @return the pageNumber
-     */
-    public int getPageNumber() {
-        return pageNumber;
-    }
-
-    /**
-     * @param pageNumber the pageNumber to set
-     */
-    public void setPageNumber(int pageNumber) {
-        this.pageNumber = pageNumber;
-    }
-
-    /**
-     * @return the pageSize
-     */
-    public int getPageSize() {
-        return pageSize;
-    }
-
-    /**
-     * @param pageSize the pageSize to set
-     */
-    public void setPageSize(int pageSize) {
-        this.pageSize = pageSize;
-    }
+    
     
     
 }

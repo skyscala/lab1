@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package stdof.lang.util;
+package stdof.query;
 
 import com.querydsl.core.types.dsl.BooleanExpression;
 import stdof.query.FilterCriteria;

@@ -6,44 +6,20 @@
 package stdof.query.params;
 
 import java.util.List;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  *
  * @author zeyarh
  */
+
+@Getter
+@Setter
 public class FilterDef {
     
     private String type;
     private List<String> expressions;
 
-    /**
-     * @return the type
-     */
-    public String getType() {
-        return type;
-    }
-
-    /**
-     * @param type the type to set
-     */
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    /**
-     * @return the expressions
-     */
-    public List<String> getExpressions() {
-        return expressions;
-    }
-
-    /**
-     * @param expressions the expressions to set
-     */
-    public void setExpressions(List<String> expressions) {
-        this.expressions = expressions;
-    }
-    
-    
     
 }

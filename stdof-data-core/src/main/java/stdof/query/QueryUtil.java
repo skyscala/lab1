@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package stdof.lang.util;
+package stdof.query;
 
 
 import stdof.query.params.Filter;
@@ -23,17 +23,19 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import stdof.lang.CommonLogger;
+import stdof.lang.DateUtil;
 
 
 /**
  *
  * @author zeyarh
  */
-public class WebQueryUtil {
+public class QueryUtil {
     
 
 
-    private WebQueryUtil(){}
+    private QueryUtil(){}
 
     private static void sortFilters(List<FilterParam> filters){
         Collections.sort(filters, (FilterParam o1, FilterParam o2) -> {
@@ -76,7 +78,7 @@ public class WebQueryUtil {
                 s.setEnd(date2);
                 searchCriteria = s;
             } catch (Exception ex) {
-                CommonLogger.log(WebQueryUtil.class, "Date Range filter params processing error - ", ex);
+                CommonLogger.log(QueryUtil.class, "Date Range filter params processing error - ", ex);
                 throw new IllegalArgumentException("Invalid date range.");
             }
         } else if ("textArray".equalsIgnoreCase(filterType)) {
@@ -102,7 +104,7 @@ public class WebQueryUtil {
             if (key == null) {
                 key = k;
             }
-            CommonLogger.log(WebQueryUtil.class, "filterKey:" + key);
+            CommonLogger.log(QueryUtil.class, "filterKey:" + key);
             searchCriteria.setKey(key);
             searchCriteria.setOperation(filterParam.getFilterExpression());
         }
