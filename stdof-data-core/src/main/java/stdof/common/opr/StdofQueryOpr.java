@@ -20,4 +20,5 @@ public interface StdofQueryOpr {
             String searchType, FilterCriteria[] filterArray,SortCriteria[] sortArray);
     
     
+    StdofEntity findById(String id);
 }

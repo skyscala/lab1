@@ -27,6 +27,8 @@ import stdof.lang.ExternalPropUtil;
 public class DbConfig extends AbstractMongoConfiguration {
 
     private static final Properties PROP = ExternalPropUtil.retrieveProp();
+    
+    
 
     @Override
     protected String getDatabaseName() {

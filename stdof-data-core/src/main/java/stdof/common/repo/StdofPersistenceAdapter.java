@@ -41,8 +41,19 @@ class StdofPersistenceAdapter implements StdofQueryOpr,StdofManageOpr{
     }
 
     @Override
+    public StdofEntity findById(String id) {
+        Optional<StdofEntity> optional=repo.findById(id);
+        if(optional.isPresent()){
+            return optional.get();
+        }
+        throw new IllegalArgumentException("Cannot find data by given id.");
+    }
+    
+    
+
+    @Override
     public StdofEntity save(StdofEntity entity) {        
-        return repo.save(entity);
+        return repo.save(entity);        
     }
 
     @Override
@@ -53,7 +64,7 @@ class StdofPersistenceAdapter implements StdofQueryOpr,StdofManageOpr{
             repo.delete(entity);
             return entity;
         }
-        throw new IllegalArgumentException("Cannot find data by given id.");
+        throw new IllegalArgumentException("Cannot delete data by given id.");
     }
 
     

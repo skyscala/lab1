@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package stdof.common.repo;
+package stdof.common;
 
 import de.flapdoodle.embed.mongo.MongodExecutable;
 import de.flapdoodle.embed.mongo.MongodProcess;
@@ -19,19 +19,23 @@ import java.nio.file.Files;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
-import static junit.framework.Assert.assertTrue;
+
 import org.bson.types.ObjectId;
 
 import org.junit.AfterClass;
+import static org.junit.Assert.assertTrue;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.data.domain.Page;
 import stdof.DbConfig;
+import stdof.common.docs.config.StdofEntityConfig;
 
 import stdof.common.docs.entity.StdofEntity;
 import stdof.common.opr.StdofManageOpr;
 import stdof.common.opr.StdofQueryOpr;
+import stdof.common.repo.StdofManageOprBeanFactory;
+import stdof.common.repo.StdofQueryOprBeanFactory;
 import stdof.lang.CommonLogger;
 import stdof.lang.ExternalPropUtil;
 import stdof.lang.JsonUtil;
@@ -126,11 +130,11 @@ public class AcceptanceTest {
 
     @Test
     public void test() {
-        try (AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(DbConfig.class)) {
+        try (AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(DbConfig.class,StdofEntityConfig.class)) {
 
             StdofEntity entity = new StdofEntity();
             StdofManageOpr saveOpr = StdofManageOprBeanFactory.create(context);
-            StdofQueryOpr queryOpr = context.getAutowireCapableBeanFactory().createBean(StdofPersistenceAdapter.class);
+            StdofQueryOpr queryOpr = StdofQueryOprBeanFactory.create(context);
 
             saveOpr.save(entity);
 

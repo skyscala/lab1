@@ -7,8 +7,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>stdof-data-core</module>
-        <module>springboot-war</module>
-    </modules>
+    <module>web</module>
+  </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

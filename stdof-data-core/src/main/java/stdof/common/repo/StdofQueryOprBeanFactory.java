@@ -5,20 +5,18 @@
  */
 package stdof.common.repo;
 
-
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import stdof.common.opr.StdofManageOpr;
+import stdof.common.opr.StdofQueryOpr;
 
 /**
  *
  * @author zeyarhtike
  */
-public class StdofManageOprBeanFactory {
+public class StdofQueryOprBeanFactory {
     
-    private StdofManageOprBeanFactory(){}
+    private StdofQueryOprBeanFactory(){}
     
-    public static StdofManageOpr create(AnnotationConfigApplicationContext context){
+    public static StdofQueryOpr create(AnnotationConfigApplicationContext context){
         return  context.getAutowireCapableBeanFactory().createBean(StdofPersistenceAdapter.class);
     }
 }

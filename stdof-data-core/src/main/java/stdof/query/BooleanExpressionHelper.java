@@ -6,8 +6,7 @@
 package stdof.query;
 
 import com.querydsl.core.types.dsl.BooleanExpression;
-import stdof.query.FilterCriteria;
-import stdof.query.PredicateFactory;
+
 
 /**
  *
