@@ -43,7 +43,6 @@ public class QueryLogicMapper {
         
         Pageable pageable;
         if(sortArray == null || sortArray.length <=0){
-            
             pageable = PageRequest.of(offsetPage, size);
         }else{
             pageable = PageableFactory.createPageRequest(offsetPage, size, clz, sortArray);

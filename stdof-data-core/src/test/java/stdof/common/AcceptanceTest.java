@@ -187,6 +187,7 @@ public class AcceptanceTest {
             assertTrue(deletedEntity.getId().equals(entity.getId()));
             assertTrue(deletedEntity.getAttributes().get("attr1").equals(attributes.get("attr1")));
 
+            CommonLogger.log(AcceptanceTest.class,"Dummy",new Exception("Dummy Exception"));
         }
 
     }
