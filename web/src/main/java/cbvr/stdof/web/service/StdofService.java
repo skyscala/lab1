@@ -19,12 +19,12 @@ import stdof.common.repo.StdofQueryOprBeanFactory;
 import stdof.lang.CommonLogger;
 import stdof.lang.ExternalPropUtil;
 import stdof.lang.JsonUtil;
-import stdof.query.AbstractQueryResultFactory;
-import stdof.query.QueryUtil;
-import stdof.query.params.Filter;
-import stdof.query.params.PaginationParam;
-import stdof.query.params.QueryParam;
-import stdof.query.params.SortParam;
+import stdof.pgb.functional.component.AbstractQueryResultFactory;
+import stdof.pgb.util.QueryHelper;
+import stdof.pgb.generic.component.Filter;
+import stdof.pgb.generic.component.PaginationParam;
+import stdof.pgb.generic.component.QueryParam;
+import stdof.pgb.generic.component.SortParam;
 
 /**
  *
@@ -106,8 +106,8 @@ public class StdofService {
                 Filter filter = queryParam.getFilter();
                 Page<StdofEntity> page = queryOpr.query(pageNumber, pageSize,
                         filter!=null?filter.getLogic():"and",
-                        QueryUtil.createFilterCriteriaArray(filter, null),
-                        QueryUtil.createSortCriteriaArray(sortList, null));
+                        QueryHelper.createFilterCriteriaArray(filter, null),
+                        QueryHelper.createSortCriteriaArray(sortList, null));
                 AbstractQueryResultFactory<StdofEntity, Map> qrf = new AbstractQueryResultFactory<StdofEntity, Map>() {
                     @Override
                     protected Map convert(StdofEntity a) {

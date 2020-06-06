@@ -9,11 +9,11 @@ import com.querydsl.core.types.Predicate;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import stdof.query.BooleanExpressionHelper;
+import stdof.pgb.util.BooleanExpressionHelper;
 import stdof.lang.CommonLogger;
-import stdof.query.FilterCriteria;
-import stdof.query.PageableFactory;
-import stdof.query.SortCriteria;
+import stdof.pgb.functional.component.FilterCriteria;
+import stdof.pgb.util.PageableFactory;
+import stdof.pgb.functional.component.SortCriteria;
 
 /**
  *

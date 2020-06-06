@@ -39,9 +39,9 @@ import stdof.common.repo.StdofQueryOprBeanFactory;
 import stdof.lang.CommonLogger;
 import stdof.lang.ExternalPropUtil;
 import stdof.lang.JsonUtil;
-import stdof.query.FilterCriteria;
-import stdof.query.SortCriteria;
-import stdof.query.StringFilterCriteria;
+import stdof.pgb.functional.component.FilterCriteria;
+import stdof.pgb.functional.component.SortCriteria;
+import stdof.pgb.functional.component.StringFilterCriteria;
 
 /**
  *

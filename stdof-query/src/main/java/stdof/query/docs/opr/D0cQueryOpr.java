@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package stdof.common.opr;
+package stdof.query.docs.opr;
 
 import org.springframework.data.domain.Page;
-import stdof.common.docs.entity.StdofEntity;
+import stdof.query.docs.entity.D0cEntity;
 import stdof.pgb.functional.component.FilterCriteria;
 import stdof.pgb.functional.component.SortCriteria;
 
@@ -14,11 +14,15 @@ import stdof.pgb.functional.component.SortCriteria;
  *
  * @author zeyarhtike
  */
-public interface StdofQueryOpr {
+public interface D0cQueryOpr {
     
-    Page<StdofEntity> query(int pageNumber, int pageSize,
-            String searchType, FilterCriteria[] filterArray,SortCriteria[] sortArray);
+    Page<D0cEntity> query(
+            int pageNumber, 
+            int pageSize,
+            String searchType, 
+            FilterCriteria[] filterArray,
+            SortCriteria[] sortArray);
     
+    D0cEntity findById(String id);
     
-    StdofEntity findById(String id);
 }

@@ -3,21 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package stdof.common.opr;
+package stdof.query.docs.opr;
 
 import org.bson.types.ObjectId;
-import stdof.common.docs.entity.StdofEntity;
+import stdof.query.docs.entity.D0cEntity;
 
 /**
  *
  * @author zeyarhtike
  */
-public interface StdofManageOpr {
+public interface D0cManageOpr {    
     
-    
-    StdofEntity save(StdofEntity entity);
-    
-    StdofEntity delete(ObjectId objId);
-    
-    
+    D0cEntity save(D0cEntity entity);    
+    D0cEntity delete(ObjectId objId);
+        
 }

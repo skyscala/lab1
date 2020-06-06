@@ -7,8 +7,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>stdof-data-core</module>
-    <module>web</module>
-  </modules>
+        <module>web</module>
+        <module>stdof-query</module>
+    </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
