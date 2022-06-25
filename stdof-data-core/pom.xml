@@ -17,7 +17,7 @@
         <spring.version>5.2.5.RELEASE</spring.version>
         <querydsl.version>4.2.1</querydsl.version>        
         <mongodb.driver.version>3.11.0-rc0</mongodb.driver.version>
-        <spring.data.mongodb>2.2.0.RC2</spring.data.mongodb>
+        <spring.data.mongodb>3.3.5</spring.data.mongodb>
     </properties>
     
     <dependencies>
